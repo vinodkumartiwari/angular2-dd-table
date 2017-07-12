@@ -1,0 +1,21 @@
+<div class="mainContainer">
+<table>
+<tr><td><input type="text" placeholder="<Enter>" (click)=toggleShow()><label for="male" (click)="toggleShow()">▼</label></td><td>xxxxxxxxxxxxxxxxx</td></tr>
+<tr><td></td><td>yyyyyyyyyyyyyyyyy</td></tr>
+<tr><td></td><td>zzzzzzzzzzzzzzzzz</td></tr>
+</table>
+
+
+<div *ngIf="tableShow" class="container">
+	<table (click)="toggleShow()">
+	    <tbody>
+	        <tr *ngFor="let item of data" (click)="rowClicked($event)">
+	            <td>{{item.name}}</td>
+	            <td>{{item.email}}</td>
+	            <td class="text-right">{{item.age}}</td>
+	            <td>{{item.city | uppercase}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
+</div>	
